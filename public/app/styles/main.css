@@ -204,7 +204,6 @@ body {
 
 
 header{
-  padding:100px;
   text-align: center;
   color: #f7f7f7;
   background-color: #333;
@@ -285,4 +284,6 @@ article p{
   background-color: #000000;
 }
 
-
+.navbar{
+  margin-bottom:0px;
+}
