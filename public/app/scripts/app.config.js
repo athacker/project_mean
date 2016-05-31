@@ -8,6 +8,10 @@ angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $
    }).state('login',{
      url:'/',
      templateUrl:'views/login.html'
+   }).state('responsive',{
+     url:'/responsive',
+     templateUrl:'views/responsive/responsive.html',
+     controller:'JobsCtrl'
    }).state('jobs',{
      url:'/jobs',
      templateUrl:'views/jobs.html',
