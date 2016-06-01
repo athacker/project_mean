@@ -7,7 +7,7 @@
 
 <header>
 
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default navbar-inverse navbar-fixed-top cbp-af-header">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -17,7 +17,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Brand</a>
+
+        <a   href="#">
+          <img src="images/brand4.jpg" > </a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -40,28 +42,7 @@
 
 
 
-  <div class="container-fluid">
-    <div class="row">
 
-      <aside class="right-icon-list right-icon-list-top visible-md">
-        <h4>SHOW Med Devices</h4>
-        <a href="">
-          <img src="../images/tech_widget.jpg"/>
-          <h6>Architecture</h6>
-        </a>
-        <a href="">
-          <img src="../images/tech_doc_widget.jpg"/>
-          <h6>Build Tools</h6>
-        </a>
-        <a href="">
-          <img src="../images/edit_widget.png"/>
-          <h6>Quality</h6>
-        </a>
-      </aside>
-    </div>
-  </div>
-
-  <div class="clearfix visible-xs-block"></div>
 
   <div class="container-fluid ">
     <div class="row row-sm-height pull-right">
@@ -82,39 +63,58 @@
       </section>
 
       <aside class="col-sm-height col-sm-3 col-lg-2 col-sm-pull-9 col-lg-pull-8 ">
-        <h4 class="range-title">Far Left Column</h4>
+        <h3 class="range-title">Dev Tools</h3>
         <div class="range-list">
           <a href="">
-            <img src="../images/tech_manual.png"/>
-            <h4>Tech Info</h4>
+            <img src="../images/angular.png"/>
+            <h4>Angular</h4>
           </a>
 
           <a href="">
-            <img src="../images/doc_lock.jpg"/>
-            <h4>Security</h4>
+            <img src="../images/npm.png"/>
+            <h4>Node</h4>
           </a>
 
           <a href="">
-            <img src="../images/support_guy.jpg"/>
-            <h4>Help</h4>
+            <img src="../images/mongo.png"/>
+            <h4>Mongo</h4>
           </a>
+
+          <a href="">
+            <img src="../images/express.jpeg"/>
+            <h4>Express</h4>
+          </a>
+
+          <a href="">
+            <img src="../images/satellite.jpg"/>
+            <h4>Satellite</h4>
+          </a>
+
         </div>
       </aside>
 
-      <aside class="col-sm-height  right-icon-list col-xs-12 col-md-2 hidden-md">
-       <h4>HIDE Medium Devices</h4>
-        <a href="">
-          <img src="../images/tech_widget.jpg"/>
-          <h6>Architecture</h6>
-        </a>
-        <a href="">
-          <img src="../images/tech_doc_widget.jpg"/>
-          <h6>Build Tools</h6>
-        </a>
-        <a href="">
-          <img src="../images/edit_widget.png"/>
-          <h6>Quality</h6>
-        </a>
+
+      <aside class="col-sm-height  right-icon-list col-xs-12 col-md-2">
+       <h3 class="right-icon-list">QA Tools</h3>
+
+          <a href="">
+            <img src="../images/mockito.png"/>
+            <h5>Service Tier - Java</h5>
+          </a>
+          <a href="">
+            <img src="../images/junit.jpg"/>
+            <h5>Data Tier - Java</h5>
+          </a>
+          <a href="">
+            <img src="../images/protractor.jpg"/>
+            <h5>Front End - JS</h5>
+          </a>
+
+          <a href="">
+            <img src="../images/karma.png"/>
+            <h5>Service Tier - JS</h5>
+          </a>
+
     </aside>
 
     </div>
@@ -129,5 +129,11 @@
 <footer class="container-fluid">
   <h1>Footer</h1>
 </footer>
+
+<!--this needs to b placed after the last dom element! causes header to go opac for mobile -->
+<script src="../../scripts/classie.js"></script>
+<script src="../../scripts/cbpAnimatedHeader.js"></script>
+
+
 </body>
 </html>
