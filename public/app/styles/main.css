@@ -29,57 +29,6 @@ body {
   padding-bottom: 19px;
 }
 
-/*/!* Custom page footer *!/*/
-/*.footer {*/
-  /*padding-top: 19px;*/
-  /*color: #777;*/
-
-/*}*/
-
-/*.container-narrow > hr {*/
-  /*margin: 30px 0;*/
-/*}*/
-
-/* Main marketing message and sign up button */
-/*.jumbotron {*/
-  /*text-align: center;*/
-  /*border-bottom: 1px solid #e5e5e5;*/
-/*}*/
-/*.jumbotron .btn {*/
-  /*font-size: 21px;*/
-  /*padding: 14px 24px;*/
-/*}*/
-
-/*/!* Supporting marketing content *!/*/
-/*.marketing {*/
-  /*margin: 40px 0;*/
-/*}*/
-/*.marketing p + h4 {*/
-  /*margin-top: 28px;*/
-/*}*/
-
-/* Responsive: Portrait tablets and up */
-/*@media screen and (min-width: 768px) {*/
-  /*.container {*/
-    /*max-width: 730px;*/
-  /*}*/
-
-  /* Remove the padding we set earlier */
-  /*.header,*/
-  /*.marketing,*/
-  /*.footer {*/
-    /*padding-left: 0;*/
-    /*padding-right: 0;*/
-  /*}*/
-  /*/!* Space out the masthead *!/*/
-  /*.header {*/
-    /*margin-bottom: 30px;*/
-  /*}*/
-  /*/!* Remove the bottom border on the jumbotron for visual effect *!/*/
-  /*.jumbotron {*/
-    /*border-bottom: 0;*/
-/*//  }*/
-/*}*/
 /*.form-signin {*/
   /*max-width: 280px;*/
   /*padding: 15px;*/
@@ -140,15 +89,12 @@ body {
 
 
 
-
-
 .well[ui-view]{
   height: 65px;
 }
 .ui-view-container {
   position: relative;
 }
-
 [ui-view].ng-enter, [ui-view].ng-leave {
   position: absolute;
   left: 0;
@@ -187,6 +133,7 @@ body {
   transform:translate3d(100px, 0, 0);
 }
 
+
 .social-button{
   font-size:24px;
   padding: 1px;
@@ -196,17 +143,20 @@ body {
   color:white;
 }
 .linked-in{
-    background-color: #0e76a8;
+  background-color: #0e76a8;
   color:white;
 }
 .google{
-    background-color:#dd4b39;
+  background-color:#dd4b39;
   color:white;
 }
 .twitter{
-    background-color: #4099FF;
+  background-color: #4099FF;
   color:white;
 }
+
+
+
 
 
 header{
@@ -303,13 +253,50 @@ article p{
   -webkit-transition: all .5s;
   transition: all .5s;
 }
-.navbar img{
-  padding-top: 10px;
-  width: 40%;
-  height: 40%;
-}
+
+/*library causes header to turn opaque when scrolling mobile*/
 .cbp-af-header-shrink{
   padding-top: 5px;
   padding-bottom: 5px;
   opacity: .5;
+}
+
+/*shrinks brand as screen gets below 400 px*/
+@media(max-width: 400px){
+  .navbar-header{
+    position:relative;
+  }
+  .navbar img{
+    position:absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
+    width:70%
+    height:70%
+  }
+}
+
+.img-responsive{
+  margin: 0px auto;
+  border: 3px solid sandybrown;
+  box-shadow: sienna 10px 10px 60px;
+}
+
+.fill-screen{
+  background-size: cover;
+  background-position: center;
+}
+.content-filler{
+  min-height: 10px;
+  text-align: center;
+  padding: 10px
+}
+
+.fixed-attached{
+  background-attachment: fixed;
+}
+@media(max-width: 1024px){
+  .fixed-attached {
+    background-attachment: scroll;
+  }
 }
