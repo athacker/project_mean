@@ -12,6 +12,10 @@ angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $
      url:'/responsive',
      templateUrl:'views/responsive/responsive.html',
      controller:'JobsCtrl'
+   }).state('images',{
+     url:'/images',
+     templateUrl:'views/responsive/images.html',
+     controller:'JobsCtrl'
    }).state('jobs',{
      url:'/jobs',
      templateUrl:'views/jobs.html',
