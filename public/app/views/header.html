@@ -1,4 +1,5 @@
 <div ng-controller="HeaderCtrl" class="header">
+
   <div class="navbar navbar-default" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -17,7 +18,7 @@
 
         <ul class="nav navbar-nav" >
           <li ng-show="isAuthenticated()" ui-sref-active="active"><a ui-sref="main">Main</a></li>
-
+          <li ng-show="isAuthenticated()"ui-sref-active="responsive"><a ui-sref="responsive">Responsive</a></li>
           <li ng-show="isAuthenticated()"ui-sref-active="active"><a ui-sref="jobs">Jobs</a></li>
           <li ng-show="isAuthenticated()"ui-sref-active="active"><a ui-sref="register">Update Profile</a></li>
           <li ng-hide="isAuthenticated()"ui-sref-active="active"><a ui-sref="login">Login </a></li>
