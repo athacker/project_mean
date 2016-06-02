@@ -6,6 +6,8 @@
 }
 
 body {
+  /*position:relative; need for scrollspy*/
+
   padding-top: 70px;
 }
 
@@ -286,11 +288,7 @@ article p{
   background-size: cover;
   background-position: center;
 }
-.content-filler{
-  min-height: 10px;
-  text-align: center;
-  padding: 10px
-}
+
 
 .fixed-attached{
   background-attachment: fixed;
@@ -299,4 +297,52 @@ article p{
   .fixed-attached {
     background-attachment: scroll;
   }
+}
+.text-banner{
+  text-align: center;
+  margin: 40px 20px;
+}
+
+.text-banner h1{
+  font-size:44px;
+}
+.activity-section{
+  margin:50px;
+}
+.activity-element{
+  text-align:center;
+}
+
+.activity-element img{
+  width:150px;
+  heght:150px;
+}
+.contact-us{
+  margin: 50px;
+  text-align:center;
+}
+
+.title-row{
+  position: relative;
+  min-height: 300px;
+}
+
+.title-image{
+  position: absolute;
+  padding: 20px;
+  top:50%;
+  left:50%;
+  margin-right:-50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+.down-button{
+  position:absolute;
+  bottom: 40px;
+  width:100%;
+  text-align: center;
+}
+
+.down-button i{
+  color:white;
 }
