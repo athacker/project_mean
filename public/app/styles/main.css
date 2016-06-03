@@ -346,3 +346,11 @@ article p{
 .down-button i{
   color:white;
 }
+
+#gc_carousel{
+  margin:40px 0px;
+}
+#gc_carousel img{
+  width: 100%;
+  height: auto;
+}
