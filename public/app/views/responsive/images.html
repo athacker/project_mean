@@ -2,8 +2,9 @@
 <head>
   <link rel="stylesheet" href="../../styles/reflow.css">
   <link rel="stylesheet" href="../../styles/column.css">
+  <link rel="stylesheet" href="../../styles/animate.css">
 </head>
-<body>
+<body  >
 
 <header class="navbar-header">
 
@@ -23,14 +24,14 @@
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="ImagesCtrl">
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link1</a></li>
-          <li><a href="#">Link2</a></li>
-          <li><a href="#">Link3</a></li>
-          <li><a href="#">Link4</a></li>
+          <li ng-click="scrollTo('bath')"><a href="#top"  >Home</a></li>
+          <li><a href="#cove"  >Cove</a></li>
+          <li><a href="#stream"  >Stream</a></li>
+          <li><a href="#waterfall" >Waterfall</a></li>
+          <li><a href="#bath" >Bath</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -41,13 +42,13 @@
 </header>
 
 
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="ImagesCtrl">
 
-  <section class="row">
-    <div class="fill-screen" style="background-image: url(../../images/gc5.jpg)">
+  <section id="top" class="row title-row">
+    <div class="fill-screen stellar-bg" style="background-image: url(../../images/gc5.jpg)" data-stellar-background-ratio=".0.2">
       <img class="img-responsive title-image" src="../../images/center_brand.png"/>
-      <div class="down-button">
-        <a class="btn">
+      <div class="down-button" >
+        <a ng-click="scrollTo('cove')" class="btn">
           <i class="fa fa-arrow-circle-o-down fa-4x"></i>
         </a>
       </div>
@@ -67,26 +68,24 @@
 
   <section class="row">
     <div class="fill-screen fixed-attached" style="background-image: url(../../images/gc4.jpg)">
-
-
     </div>
   </section>
 
 
-  <section class="row activity-section">
-      <div class="activity-element col-md-4">
+  <section id="cove" class="row activity-section">
+      <div class="activity-element col-md-4 wow fadeInDown">
         <h2>The Grand Canyon</h2>
         <p>is 277 miles (446 km) long, up to 18 miles (29 km) wide and attains a depth of over a mile
         (6,093 feet or 1,857 meters).</p>
       </div>
 
-     <div class="activity-element col-md-4">
+     <div class="activity-element col-md-4 wow fadeInDown">
        <h2>Nearly two billion years</h2>
        <p>of Earth's geological history have been exposed as  the Colorado River and its tributaries cut their channels through layer after layer of rock while the Colorado
        Plateau was uplifted.</p>
       </div>
 
-      <div class="activity-element col-md-4">
+      <div class="activity-element col-md-4 wow fadeInDown">
         <h2>While some aspects</h2>
         <p>about the history of incision of the canyon are debated by geologists,
         [4] several recent studies support the hypothesis that the Colorado River established its course through the area
@@ -95,7 +94,7 @@
       </div>
   </section>
 
-  <section class="row">
+  <section id="stream" class="row">
     <div class="fill-screen fixed-attached" style="background-image: url(../../images/gc3.jpg)"> </div>
   </section>
   <section class="row text-banner">
@@ -105,7 +104,7 @@
     from Spain, who arrived in 1540.[9]
   </section>
 
-  <section class="row">
+  <section id="waterfall" class="row">
     <div class="fill-screen fixed-attached" style="background-image: url(../../images/gc2.jpg)"> </div>
   </section>
   <section class="row text-banner">
@@ -115,7 +114,7 @@
   </section>
 
 
-  <section class="row">
+  <section id="bath" class="row">
     <div class="fill-screen fixed-attached" style="background-image: url(../../images/gc1.jpg)"> </div>
   </section>
   <section class="row contact-us">
@@ -135,6 +134,9 @@
 <!--this needs to b placed after the last dom element! causes header to go opac for mobile -->
 <script src="../../scripts/other/classie.js"></script>
 <script src="../../scripts/other/cbpAnimatedHeader.js"></script>
+<script src="../../scripts/other/jquery.stellar.js"></script>
+<script src="../../scripts/other/jquery.easing.js"></script>
+<script src="../../scripts/other/animate.js"></script>
 <script src="../../scripts/other/scrolling.js"></script>
 
 
