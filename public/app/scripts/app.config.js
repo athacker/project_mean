@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $httpProvider, $authProvider,  API_URL){
+angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $httpProvider, $authProvider, $locationProvider,  API_URL){
   $urlRouterProvider.otherwise('/');
    $stateProvider.state('main',{
      url:'/',
@@ -16,7 +16,10 @@ angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $
      url:'/images',
      templateUrl:'views/responsive/images.html',
      controller:'JobsCtrl'
-   }).state('jobs',{
+   }).state('carousel',{
+     url:'/carousel',
+     templateUrl:'views/responsive/carousel.html'})
+     .state('jobs',{
      url:'/jobs',
      templateUrl:'views/jobs.html',
      controller:'JobsCtrl'
@@ -27,7 +30,6 @@ angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $
      url:'/logout',
      controller:'LogoutCtrl'
    });
-
    $authProvider.baseUrl = API_URL;
    $authProvider.loginUrl = '/auth/login';
    $authProvider.signupUrl ='/auth/signup';
