@@ -33,6 +33,7 @@ app.use(function(req,res,next){
 
 var server = app.listen(port,function(){
      console.log('api listening on ', server.address().port);
+     console.log('Make sure mongodb has been started.');
 });
 
 passport.use('local-login', RegisterStrategy.login);
