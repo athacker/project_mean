@@ -363,3 +363,6 @@ article p{
     margin-top: 20px;
   }
 }
+ .has-error {
+  color:red;
+}
