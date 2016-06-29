@@ -19,46 +19,103 @@
     <!-- endbuild -->
   </head>
   <body ng-app="secureApp">
-    <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+
 
     <!-- Add your site or application content here -->
     <div ng-include="'views/header.html'"></div>
 
 
-    <div class="container" ng-cloak>
+    <div class="container-fluid ">
+      <div class="row row-sm-height ">
 
-      <div class="row">
-        <div class="span12 ui-view-container">
-          <div  ui-view></div>
-        </div>
+
+        <section class="col-sm-height col-sm-9 col-lg-8 col-sm-push-3 col-lg-push-2">
+          <article>
+            <div  ui-view></div>
+          </article>
+        </section>
+
+
+
+        <aside class="col-sm-height col-sm-3 col-lg-2 col-sm-pull-9 col-lg-pull-8 ">
+          <h3 class="range-title">Dev Tools</h3>
+
+          <div class="range-list">
+            <a href="">
+              <img src="images/angular.png"/>
+              <h4>Angular</h4>
+            </a>
+
+
+            <a href="">
+              <img src="images/npm.png"/>
+              <h4>Node</h4>
+            </a>
+
+            <a href="">
+              <img src="images/mongo.png"/>
+              <h4>Mongo</h4>
+            </a>
+
+            <a href="">
+              <img src="images/express.jpeg"/>
+              <h4>Express</h4>
+            </a>
+
+            <a href="">
+              <img src="images/satellite.jpg"/>
+              <h4>Satellite</h4>
+            </a>
+
+
+
+          </div>
+
+        </aside>
+
+        <aside class="col-sm-height  right-icon-list col-xs-12 col-md-2">
+
+          <h3 class="right-icon-list">QA Tools</h3>
+
+          <a href="">
+            <img src="images/mockito.png"/>
+            <h5>Service Tier - Java</h5>
+          </a>
+          <a href="">
+            <img src="images/junit.jpg"/>
+            <h5>Data Tier - Java</h5>
+          </a>
+          <a href="">
+            <img src="images/protractor.jpg"/>
+            <h5>Front End - JS</h5>
+          </a>
+
+          <a href="">
+            <img src="images/karma.png"/>
+            <h5>Service Tier - JS</h5>
+          </a>
+
+
+
+
+
+
+        </aside>
+
+
+
+
+
       </div>
-
-      <div ng-include="'views/alert.html'"></div>
 
 
     </div>
 
 
-    <div class="footer">
-      <div class="container">
-
-      </div>
-    </div>
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
-
+   <div ng-include="'views/alert.html'"></div>
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
