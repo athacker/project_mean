@@ -18,10 +18,10 @@
 
         <ul class="nav navbar-nav" >
           <li ng-show="isAuthenticated()" ui-sref-active="active"><a ui-sref="main">Main</a></li>
-          <li ng-show="isAuthenticated()"ui-sref-active="responsive"><a ui-sref="responsive">Responsive</a></li>
-          <li ng-show="isAuthenticated()"ui-sref-active="active"><a ui-sref="job_parent.job_detail({id:1})">Jobs</a></li>
-          <li ng-show="isAuthenticated()"ui-sref-active="active"><a ui-sref="register">Update Profile</a></li>
-          <li ng-show="isAuthenticated()"ui-sref-active="active"><a ui-sref="job_parent.quality">quality</a></li>
+          <!--<li ng-show="isAuthenticated()"ui-sref-active="responsive"><a ui-sref="responsive">Responsive</a></li>-->
+          <!--<li ng-show="isAuthenticated()"ui-sref-active="active"><a ui-sref="job_parent.job_detail({id:1})">Jobs</a></li>-->
+          <li ng-show="isAuthenticated()"ui-sref-active="active"><a ui-sref="profile">Update Profile</a></li>
+          <!--<li ng-show="isAuthenticated()"ui-sref-active="active"><a ui-sref="job_parent.quality">quality</a></li>-->
           <li ng-hide="isAuthenticated()"ui-sref-active="active"><a ui-sref="login">Login </a></li>
 
           <li ng-show="isAuthenticated()"ui-sref-active="active"><a ui-sref="logout">Log Off -- {{displayName}} </a></li>
