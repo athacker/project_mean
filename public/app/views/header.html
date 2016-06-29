@@ -11,13 +11,37 @@
           <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand" href="#/">Project Information</a>
+        <a class="navbar-brand" href="#/">MEAN</a>
       </div>
 
       <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
         <ul class="nav navbar-nav" >
           <li ng-show="isAuthenticated()" ui-sref-active="active"><a ui-sref="main">Main</a></li>
+
+          <li ng-show="isAuthenticated()" class="dropdown" ui-sref-active="active" >
+            <a ui-sref="system_parent" class="dropdown-toggle" data-toggle="dropdown">System <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a ui-sref="system_parent.architecture">Architecture</a></li>
+              <li><a ui-sref="system_parent.guidelines">Guidelines</a></li>
+              <li><a ui-sref="system_parent.setup">Set Up</a></li>
+
+            </ul>
+          </li>
+
+
+          <li ng-show="isAuthenticated()" class="dropdown" ui-sref-active="active" >
+            <a ui-sref="quality_parent" class="dropdown-toggle" data-toggle="dropdown">Quality <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a ui-sref="quality_parent.backend">Mockito</a></li>
+              <li><a ui-sref="quality_parent.backend">JUnit</a></li>
+              <li><a ui-sref="quality_parent.frontend">Protractor</a></li>
+              <li><a ui-sref="quality_parent.backend">Karma</a></li>
+            </ul>
+          </li>
+
+
+
           <!--<li ng-show="isAuthenticated()"ui-sref-active="responsive"><a ui-sref="responsive">Responsive</a></li>-->
           <!--<li ng-show="isAuthenticated()"ui-sref-active="active"><a ui-sref="job_parent.job_detail({id:1})">Jobs</a></li>-->
           <li ng-show="isAuthenticated()"ui-sref-active="active"><a ui-sref="profile">Update Profile</a></li>

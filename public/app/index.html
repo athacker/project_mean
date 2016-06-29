@@ -28,11 +28,13 @@
     <div class="container-fluid ">
       <div class="row row-sm-height ">
 
-
         <section class="col-sm-height col-sm-9 col-lg-8 col-sm-push-3 col-lg-push-2">
+
           <article>
             <div  ui-view></div>
+            <div ng-include="'views/alert.html'"></div>
           </article>
+
         </section>
 
 
@@ -115,7 +117,7 @@
 
 
 
-   <div ng-include="'views/alert.html'"></div>
+
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -143,6 +145,8 @@
     <script src="scripts/services/authInterceptor.js"></script>
     <script src="scripts/controllers/login.js"></script>
     <script src="scripts/services/auth.js"></script>
+    <script src="scripts/controllers/profile.js"></script>
+    <script src="scripts/controllers/system.js"></script>
     <!-- endbuild -->
 </body>
 </html>

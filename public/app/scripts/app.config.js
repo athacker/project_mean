@@ -8,6 +8,12 @@ angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $
    }).state('login',{
      url:'/',
      templateUrl:'views/login.html'
+   }).state('register',{
+     url:'/register',
+     templateUrl:'views/register.html'
+   }).state('profile',{
+     url:'/profile',
+     templateUrl:'views/profile.html'
    }).state('responsive',{
      url:'/responsive',
      templateUrl:'views/responsive/responsive.html',
@@ -21,8 +27,8 @@ angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $
      templateUrl:'views/responsive/carousel.html'})
    .state('system_parent',{
        //abstract:true,
-       controller:'JobsCtrl',
-       templateUrl:'views/jobs_parent.html',
+       controller:'SystemCtrl',
+       templateUrl:'views/system_parent.html',
        data: {
          var1: 'Job Variable1',
          var2: 'Job Variable2'
@@ -38,48 +44,21 @@ angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $
        onExit:function($log){
          console.log('Exiting the system parent  state.')
        }
-     }).state('job_parent',{
-       abstract:true,
-       url:'/jobs/:id',
-       controller:'JobsCtrl',
-       templateUrl:'views/jobs_parent.html',
-         data: {
-           var1: 'Job Variable1',
-           var2: 'Job Variable2'
-         },
-          resolve: {
-             jobs:function(){
-               return[{'id':1,'title':'baker'}]
-             }
-          },
-           onEnter:function($log){
-             console.log('Entering the jobs state.')
-           },
-           onExit:function($log){
-             console.log('Exiting the jobs state.')
-           }
-   }).state('job_parent.job_summary',{
-       url:'/summary',
-       templateUrl:'views/job_summary.html'
-   }).state('job_parent.job_detail',{
-       url:'/detail',
-       templateUrl:'views/job_detail.html'
-   }).state('register',{
-       url:'/register',
-       templateUrl:'views/register.html'
-   }).state('profile',{
-       url:'/profile',
-       templateUrl:'views/profile.html'
-     }).state('job_parent.quality',{
+   }).state('system_parent.architecture',{
+       url:'/architecture',
+       templateUrl:'views/architecture.html'
+   }).state('system_parent.guidelines',{
+       url:'/guideline',
+       templateUrl:'views/guidelines.html'
+   }).state('quality_parent',{
        url:'/quality',
-       views:{
-          'frontEnd':{
-              templateUrl:'views/protractor.html'
-          },
-         'backEnd':{
-              templateUrl:'views/mockito.html'
-         }
-       }
+       templateUrl:'views/quality_parent.html',
+     }).state('quality_parent.frontend',{
+       url:'/front',
+       templateUrl:'views/protractor.html',
+     }).state('quality_parent.backend',{
+       url:'/back',
+       templateUrl:'views/mockito.html',
      }).state('logout',{
        url:'/logout',
        controller:'LogoutCtrl'
