@@ -6,12 +6,10 @@
 }
 
 body {
-  /*position:relative; need for scrollspy*/
- // position:relative;
-  padding-top: 70px;
+
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
+
 .header, footer {
   background-color: #333;
   padding: 20px;
@@ -19,11 +17,6 @@ body {
   color:white;
 }
 
-/* Custom page header */
-.header {
- margin-bottom: 10px;
-}
-/* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
@@ -353,4 +346,20 @@ article p{
 #gc_carousel img{
   width: 100%;
   height: auto;
+}
+@media (max-width: 767px) {
+  .range-list h4{
+    display: inline;
+    font-size:18px;
+  }
+  .range-list a{
+    display:block;
+  }
+  .range-list img{
+    width:33%;
+    hight:33%
+  margin-right:10px;
+    margin-bottom:30px;
+    margin-top: 20px;
+  }
 }
