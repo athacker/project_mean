@@ -21,9 +21,11 @@ angular.module('secureApp').controller('LoginCtrl', function ($scope,$state, ale
     $auth.login($scope.user)
       .then(function(res){
         alert('success', 'Login Success', 'Welcome back, ' + res.data.user.email + '!');
+        $state.go('main');
       }).catch(function(err){
         console.log(JSON.stringify(err));
         alert('warning', 'Login Failure', 'Login in status: ' + err.statusText );
+        $state.go('login');
       });
   };
 
@@ -33,8 +35,10 @@ angular.module('secureApp').controller('LoginCtrl', function ($scope,$state, ale
     console.log('Send OAUTH authentication to provider: ' + provider);
     $auth.authenticate(provider).then(function(res){
       alert('success', 'Success Handler', 'Welcome back, ' + res.data.user.displayName + '!');
+      $state.go('main');
     }, function(err){
       alert('warning', 'Error Handler', 'Could not get you logged in... ' + err.message);
+      $state.go('login');
     });
   }
 
