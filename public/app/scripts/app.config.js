@@ -50,7 +50,10 @@ angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $
    }).state('system_parent.guidelines',{
        url:'/guideline',
        templateUrl:'views/guidelines.html'
-   }).state('quality_parent',{
+   }).state('system_parent.setup',{
+       url:'/setup',
+       templateUrl:'views/setup.html'
+     }).state('quality_parent',{
        url:'/quality',
        templateUrl:'views/quality_parent.html',
      }).state('quality_parent.frontend',{
