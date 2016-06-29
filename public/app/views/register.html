@@ -1,6 +1,6 @@
 <div class="jumbotron">
 
-  <p class="lead">User Profile</p>
+  <p class="lead">Register User</p>
 
   <form name="register" class="form-signin" novalidate ng-controller="RegisterCtrl">
     <div class="form-group" show-errors>
@@ -8,18 +8,6 @@
       <input type="email" id="email" name="email" ng-model="user.email" class="form-control" placeholder="Email address" required autofocus="">
 
       <p class="help-block" ng-show="register.email.$dirty && register.email.$invalid">Valid Email Please </p>
-    </div>
-
-    <div class="form-group" show-errors>
-      <label class="control-label" for="first">First Name</label>
-      <input type="text" name="first" id="first" ng-model="user.first" class="form-control" placeholder="First Name" required >
-      <p class="help-block" ng-show="register.first.$dirty && register.first.$invalid">First Name is Required.</p>
-    </div>
-
-    <div class="form-group" show-errors>
-      <label class="control-label" for="last">Last Name </label>
-      <input type="text" name="last" id="last"  ng-model="user.last" class="form-control" placeholder="Last Name" required >
-      <p class="help-block" ng-show="register.last.$dirty && register.last.$invalid">Last Name is Required.</p>
     </div>
 
 
@@ -31,7 +19,7 @@
       <p class="has-error" ng-show="register.confirm.$dirty && register.confirm.$invalid">Passwords must match</p>
     </div>
     <button ng-click="satellizer()" ng-disabled="register.$invalid" class="btn btn-lg btn-default btn-block" type="button" ng-click="submit()">
-     Add/Update Profile
+     Register User
     </button>
   </form>
 </div>

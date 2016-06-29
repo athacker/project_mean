@@ -11,7 +11,7 @@
           <span class="icon-bar"></span>
         </button>
 
-        <a class="navbar-brand" href="#/">Info Search</a>
+        <a class="navbar-brand" href="#/">Project Information</a>
       </div>
 
       <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -23,7 +23,8 @@
           <li ng-show="isAuthenticated()"ui-sref-active="active"><a ui-sref="register">Update Profile</a></li>
           <li ng-show="isAuthenticated()"ui-sref-active="active"><a ui-sref="job_parent.quality">quality</a></li>
           <li ng-hide="isAuthenticated()"ui-sref-active="active"><a ui-sref="login">Login </a></li>
-          <li ng-show="isAuthenticated()"ui-sref-active="active"><a ui-sref="logout">Log Out </a></li>
+
+          <li ng-show="isAuthenticated()"ui-sref-active="active"><a ui-sref="logout">Log Off -- {{displayName}} </a></li>
 
         </ul>
       </div>
