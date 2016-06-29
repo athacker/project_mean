@@ -19,7 +19,26 @@ angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $
    }).state('carousel',{
      url:'/carousel',
      templateUrl:'views/responsive/carousel.html'})
-   .state('job_parent',{
+   .state('system_parent',{
+       //abstract:true,
+       controller:'JobsCtrl',
+       templateUrl:'views/jobs_parent.html',
+       data: {
+         var1: 'Job Variable1',
+         var2: 'Job Variable2'
+       },
+       resolve: {
+         jobs:function(){
+           return[{'id':1,'title':'baker'}]
+         }
+       },
+       onEnter:function($log){
+         console.log('Entering the system parent state.')
+       },
+       onExit:function($log){
+         console.log('Exiting the system parent  state.')
+       }
+     }).state('job_parent',{
        abstract:true,
        url:'/jobs/:id',
        controller:'JobsCtrl',
