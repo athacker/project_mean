@@ -48,7 +48,10 @@ angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $
    }).state('register',{
        url:'/register',
        templateUrl:'views/register.html'
-   }).state('job_parent.quality',{
+   }).state('profile',{
+       url:'/profile',
+       templateUrl:'views/profile.html'
+     }).state('job_parent.quality',{
        url:'/quality',
        views:{
           'frontEnd':{

@@ -9,6 +9,7 @@ angular.module('secureApp').factory('authToken', function ($window  ) {
   var user={};
     var authToken = {
       setToken: function (token, user_) {
+        console.log('Set Token: ' + JSON.stringify(  user_));
         cachedToken = token;
         cachedUser = user_;
         storage.setItem( userToken ,token);

@@ -1,10 +1,16 @@
 'use strict';
 
-angular.module('secureApp').controller('LoginCtrl', function ($scope,$state, alert, auth, $auth) {
+angular.module('secureApp').controller('LoginCtrl', function ($rootScope, $scope,$state,  $auth, alert, auth  ) {
 
   //implement this after we get email set up on a server and add in the email verification piece.
   $scope.manual=function(){
     auth.login( $scope.user).success(function(res){
+      $rootScope.userId = res.user.id;
+      if(res.user.displayName){
+        $rootScope.displayName = res.user.displayName;
+      }else{
+        $rootScope.displayName = res.user.email;
+      }
       if ($scope.user.active) {
         alert('success', 'Success Handler', 'Welcome back, ' + res.user.email + '!');
       }else{
@@ -20,6 +26,13 @@ angular.module('secureApp').controller('LoginCtrl', function ($scope,$state, ale
   $scope.satellite=function(){
     $auth.login($scope.user)
       .then(function(res){
+        $rootScope.userId = res.data.user.id;
+        if(res.data.user.displayName){
+          $rootScope.displayName = res.data.user.displayName;
+        }else{
+          $rootScope.displayName = res.data.user.email;
+        }
+
         alert('success', 'Login Success', 'Welcome back, ' + res.data.user.email + '!');
         $state.go('main');
       }).catch(function(err){
@@ -34,6 +47,8 @@ angular.module('secureApp').controller('LoginCtrl', function ($scope,$state, ale
   $scope.authenticate=function(provider){
     console.log('Send OAUTH authentication to provider: ' + provider);
     $auth.authenticate(provider).then(function(res){
+      $rootScope.userId = res.data.user.id;
+      $rootScope.displayName =res.data.user.displayName;
       alert('success', 'Success Handler', 'Welcome back, ' + res.data.user.displayName + '!');
       $state.go('main');
     }, function(err){
