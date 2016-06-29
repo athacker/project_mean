@@ -19,16 +19,48 @@ angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $
    }).state('carousel',{
      url:'/carousel',
      templateUrl:'views/responsive/carousel.html'})
-     .state('jobs',{
-     url:'/jobs',
-     templateUrl:'views/jobs.html',
-     controller:'JobsCtrl'
+   .state('job_parent',{
+       abstract:true,
+       url:'/jobs/:id',
+       controller:'JobsCtrl',
+       templateUrl:'views/jobs_parent.html',
+         data: {
+           var1: 'Job Variable1',
+           var2: 'Job Variable2'
+         },
+          resolve: {
+             jobs:function(){
+               return[{'id':1,'title':'baker'}]
+             }
+          },
+           onEnter:function($log){
+             console.log('Entering the jobs state.')
+           },
+           onExit:function($log){
+             console.log('Exiting the jobs state.')
+           }
+   }).state('job_parent.job_summary',{
+       url:'/summary',
+       templateUrl:'views/job_summary.html'
+   }).state('job_parent.job_detail',{
+       url:'/detail',
+       templateUrl:'views/job_detail.html'
    }).state('register',{
-     url:'/register',
-     templateUrl:'views/register.html'
-   }).state('logout',{
-     url:'/logout',
-     controller:'LogoutCtrl'
+       url:'/register',
+       templateUrl:'views/register.html'
+   }).state('job_parent.quality',{
+       url:'/quality',
+       views:{
+          'frontEnd':{
+              templateUrl:'views/protractor.html'
+          },
+         'backEnd':{
+              templateUrl:'views/mockito.html'
+         }
+       }
+     }).state('logout',{
+       url:'/logout',
+       controller:'LogoutCtrl'
    });
    $authProvider.baseUrl = API_URL;
    $authProvider.loginUrl = '/auth/login';
@@ -39,30 +71,32 @@ angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $
   $authProvider.google({
     clientId:'189990944098-glmd1v70437toome0llqp3jkesl7r8jh.apps.googleusercontent.com',
     url:API_URL + '/auth/google',
-    redirectUri: 'http://localhost:8080'
+    redirectUri: API_URL
   });
 
   $authProvider.facebook({
     clientId:'1699973796934514',
-    url:API_URL + '/auth/facebook'
+    url:API_URL + '/auth/facebook',
   });
 
-
+  //add auth interceptor to requests
   $httpProvider.interceptors.push('authInterceptor');
 })
- // .constant('API_URL','http://www.athacker.ca')
- .constant('API_URL','http://localhost:8080')
-.run(function($window){
+
+.constant('API_URL','http://localhost:8080')
+.run(function($window, $rootScope){
   var params = $window.location.search.substring(1);
-    console.log('1Processing return call back..');
   //break up google return authorization from login pop-up
   if (params && $window.opener && $window.opener.location.origin === $window.location.origin){
-    console.log('2Processing return call back..');
+      console.log('Process OAUTH callback from social login.');
       var pair = params.split('=');
       var code = decodeURIComponent(pair[1]);
       $window.opener.postMessage(code, $window.location.origin);
   }
 
+    $rootScope.$on('routeChangeError',function(event, current, previous,rejection ){
+      console.log('Failed to change routes: ' + rejection );
+    });
 
 
   });
