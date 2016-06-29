@@ -1,0 +1,166 @@
+head{}
+
+body{
+ background-color: #cecece;
+}
+a[href*=mail]{
+ background-image:url(email.jpg) ;
+}
+/*look for a href with an href*/
+a[href]{
+  font-family: Arial;
+  font-size:larger;
+  color: orange;
+}
+/*any link with cnn make it orange!*/
+a[href *=cnn]{
+  font-weight: 900;
+  color: red;
+}
+
+li[title]{
+  color: purple;
+  font-weight: bold;
+}
+
+
+/*checked boxes with label will turn red*/
+input[type=checkbox]:checked+label{
+  color:red;
+}
+
+input:focus:invalid {
+  background-color: lightpink;
+}
+input:valid{
+  background-color: lightgreen;
+}
+input:required{
+  border:2px dotted red;
+}
+
+input:optional{
+  border:2px dotted green;
+}
+input:out-of-range{
+  background-color: pink;
+}
+input:in-range{
+  background-color: lightgreen;
+}
+
+div:not(.home .outer .inner){
+  color:red;
+  background-color: #008cba;
+}
+
+.addContent:before{
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  content: " I added this before in css.";
+  color:red;
+}
+.addContent:after{
+  -webkit-transform: rotate(180deg);
+  transform: rotate(-180deg);
+  content: " I added this after in css.";
+  color: yellow;
+}
+
+
+a[href]:hover{
+  transition: 2s ease-in 50ms;
+  content: attr(href);
+  position:relative;
+  top: 1em;
+  font-family: Arial;
+  font-size:larger;
+  background-color: yellow;
+  color: orange;
+  padding: 3px 5px;
+  line-height: 1;
+}
+
+/*parent relative, child absolute and set top btm lr margins to push out to parent.*/
+.outer{
+  height: 40px;
+  width: 70px;
+  background-color: white;
+  position:relative;
+  content:''
+}
+.inner{
+  top: 1px;
+  bottom:1px;
+  left: 1px;
+  right: 1px;
+  background-color: deeppink;
+  position: absolute;
+}
+pre {
+  color: slateblue;
+  font-size: 85%;
+  background-color: rgba(255, 255, 255, .09) transition : all 2 s ease-in 50 ms;
+}
+
+pre:hover{
+  color: mediumslateblue;
+  transform: scale(1.4);
+  transform-origin:0 0;
+  background-color:rgba(255, 255, 255, .04)  ;
+  border: solid;
+  border-width: medium;
+  border-color: navy;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+pre{
+  transition: transform 2s ease-in 50ms;
+}
+
+
+nav ul li{
+  list-style-type: none;
+}
+nav > ul > li{
+  display: inline-block;
+  position:relative;
+}
+
+nav ul ul{
+  transform: scale(1,0);
+  transform-origin: top center;
+  transition:transform 0.2s linear 50ms;
+  /*position: absolute; */
+  top:100%
+}
+nav li:hover ul{
+  transform: scale(1,1);
+}
+
+
+
+
+.animateMe{
+  width: 100px;
+  text-align: right;
+  /*border-bottom: 10px solid;*/
+  -webkit-animation: myAnimation 5s infinite;
+  animation-name: myAnimation;
+  animation-duration: 3s;
+}
+
+.animateMe::after{
+  /*font-family: FontAwesome;*/
+  /*content: "\f095";*/
+  content:'CallMe';
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+
+}
+
+@-webkit-keyframes myAnimation {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}

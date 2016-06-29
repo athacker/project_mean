@@ -1,0 +1,229 @@
+<head>
+  <link rel="stylesheet" href="css_example.css">
+  <link rel="stylesheet" href="../../../bower_components/font-awesome/css/font-awesome.min.css">
+</head>
+<br>
+
+<nav>
+  <ul>
+    <li>ONE</li>
+    <li>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
+    </li>
+
+
+
+    <li>TWO</li>
+    <li>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </li>
+    <li>THREE</li>
+    <li>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </li>
+    <li>FOUR</li>
+    <li>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </li>
+
+  </ul>
+
+
+</nav>
+
+
+
+
+<pre>
+  ^ - starts
+  $ - ends
+  * - contains
+  most browsers will not submit if form isn't valid..
+  Safari will sumbit -- BUT it will format with errors.
+
+  form attribute on an input -- allows you to reference a form away from your input (it
+  doesn't need to be within the form tags!
+
+  <!--<input type="text" form="idOfParentFormElsewhereOnPag"/>  if you use form= &#45;&#45; Never do this: form=""-->
+
+</pre>
+
+
+
+<div>
+  <a href="mailto:andrealthacker@gmail.com?Subject=Hello%20again" target="_top">Send Mail</a>
+</div>
+
+<div>
+  <a href="www.cnn.com">CNN Link</a>
+</div>
+
+<div>
+  <a href="www.kiro.com">Kiro</a>
+</div>
+
+<ul>
+  <li>1</li>
+  <li title="make me purple">2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+</ul>
+
+
+
+
+
+<form action=" ">
+  <label>Name <input type="text" required placeholder="Name" pattern="\w{6,9}" autofocus/></label><br>
+  <label>Email <input type="email" required multiple/></label><br>
+  <label>Phone <input type="text" /></label><br>
+  <label>Password <input type="password" required/></label><br><br>
+
+
+
+
+  <input type="checkbox" id="bike" name="bike">
+  <label for="bike">I have a bike</label>
+  <input type="checkbox" id="car" name="car">
+  <label for="car">I have a car!!</label><br><br>
+
+
+
+  <label>Color Picker!!<input type="color"/></label><br>
+
+  <label>Phone(tel) <input type="tel" name="usrtel"></label><br>
+
+  <label>Number <input type="number" min="10" max="100" step="10"  ></label><br>
+
+  <label>Range<input type="range" min="10" max="100" step="10"  ></label><br>
+
+  <label>Search<input type="search"   ></label><br>
+  <label>Date<input type="date"   ></label><br><br>
+
+
+
+  <label>Url to Datalist</label><input type="url" required list="mylist"/><br>
+  <datalist id="mylist">
+    <option value="www.cnn.com"/>
+    <option value="www.kiro.com"/>
+    <option value="www.komo.com"/>
+    <option value="www.ksl.com"/>
+  </datalist>
+
+
+  <label>Meter</label><meter value="10" min="0" max="100" low="20" high="95"></meter><br><br>
+  <label>Progress <progress></progress></label><br><br>
+  <label>Output <output></output></label><br><br>
+
+
+  <label>x-webkit-speech</label><input type="text" x-webkit-speech/></label><br>
+
+   <aside>
+    <div id="1">1</div>
+    <div id="2" class="home">2 Don't format this div!!</div>
+    <div id="3">3</div>
+    <div id="4">4</div>
+   </aside>
+
+
+
+  <br><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+
+<pre>
+
+  Pseudo Classes
+  :root declare original font size on root
+  :not
+  :empty
+  :lang
+  :target tap into the href (helpfull for tabs)
+  :link security risk
+  :visited  security risk
+  :hover
+  :active
+  :focus
+
+
+  Pseudo Elements
+
+  ::first-line
+  ::first-letter
+  ::selection
+  ::before
+  ::after
+
+clear fix:  gens content, displays block, and then clears it... puts a blank block.
+
+@media -- query based on size.  can either be inside ur .css OR it can be in the declaration --to
+  forward the browser to the proper css for the device.
+@supports -- if the browser supports this -- then follow this styling
+@viewport -- use for MS Surface
+
+NODE -- Weinre a great too to debug devices (phone tablet)
+
+
+  color: rgba(0,0,0,0.5) <----gives  you 50% opaque but the div is 100% good for text-shadow!!
+
+  transparent = black
+  currentColor -- font color
+
+  -web-kit-appearance -- changes the appearance of colors to resemble native controls
+
+  @font-face   is an @ rule that we declare/create  and than can use in your body.
+
+  transition -- can only do where they can have a medium value.
+
+</pre>
+
+<p class="addContent"> What happened?</p>
+
+<hr2></hr2>
+
+<div class="outer">
+<div class="inner">Inside
+</div>
+</div>
+
+
+
+<hr2></hr2>
+
+
+<div class="animateMe">Should show animiation
+ </div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
