@@ -7,11 +7,10 @@ angular.module('secureApp').factory('profileService',['$rootScope','$resource' ,
    * @param userId
    */
   var getUser = function(userId){
-    console.log('Service->GetUser...' + userId);
-    var restcall = $resource('/api/profile/:id',{id: userId} );
-    restcall.get( function(data){
-      console.log(data);
-      return data;
+    var profile = $resource('/api/profile/:id'  );
+    return profile.get({id:userId}).$promise.then(function (data) {
+      console.log('Service->GET User...' +JSON.stringify(data));
+      return data
     });
   };
 
@@ -20,13 +19,12 @@ angular.module('secureApp').factory('profileService',['$rootScope','$resource' ,
    * @param user
    */
   var saveUser = function( user){
-
-    var restcall = $resource('/api/profile/'  );
-    restcall.save({user:user}, function(data) {
-      console.log('Service->Saving User...' +JSON.stringify(data));
-      return data;
+    var profile = $resource('/api/profile/'  );
+    return profile.save({user:user}).$promise.then(function (data) {
+      console.log('Service->POST User...' +JSON.stringify(data));
+      return data
     });
-  };
+   };
 
 
   return{

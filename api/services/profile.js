@@ -14,8 +14,7 @@ console.log('Get User: ' + req.params.id );
     if(!payload.sub){
         res.status(401).send({message: 'Authentication Failed.'});
     }
-
-    var user={id:req.params.id, displayName:'John Doe' };
+    var user={id:req.params.id, first:'JEN', last:'SMITHY' };
     return res.json(user);
 };
 

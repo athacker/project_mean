@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/public/app/scripts/app.config.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/scripts/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/scripts/controllers/header.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/scripts/controllers/images.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/scripts/controllers/jobs.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/scripts/controllers/login.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/scripts/controllers/logout.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/scripts/controllers/profile.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/scripts/controllers/register.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/scripts/directives/validateEquals.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/scripts/other/animate.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/scripts/other/scrolling.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/scripts/services/authtoken.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/scripts/services/profile.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/styles/bootstrap-yeti.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/styles/column.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/styles/main.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/styles/reflow.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/alert.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/architecture.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/guidelines.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/header.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/login.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/main.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/mockito.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/profile.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/protractor.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/quality_parent.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/register.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/responsive/carousel.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/responsive/checkbox.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/responsive/checkbox.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/responsive/columnDrop.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/responsive/css_example.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/responsive/css_example.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/responsive/fluid.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/responsive/images.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/responsive/images1.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/responsive/images2.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/responsive/reflow.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/responsive/responsive.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/responsive/shifter.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/app/views/system_parent.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/bower.json" charset="UTF-8" />
+  </component>
+</project>

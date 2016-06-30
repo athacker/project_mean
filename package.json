@@ -4,7 +4,7 @@
   "description": "BackEndCode",
   "main": "api.js",
   "scripts": {
-    "postinstall": "bower install -F"
+
   },
   "repository": {
     "type": "git",
