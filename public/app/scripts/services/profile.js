@@ -2,43 +2,29 @@
 
 
 angular.module('secureApp').factory('profileService',['$rootScope','$resource' , function ($rootScope, $resource) {
-
-
-  //return $resource('/api/profile/:id',{},
-  //  {
-  //    query: {
-  //      method: 'GET',
-  //      params:{id:id},
-  //      isArray:true
-  //    },
-  //    post:{method: 'POST'}
-  //  });
-
-
+  /**
+   * GET
+   * @param userId
+   */
   var getUser = function(userId){
-
-
     console.log('Service->GetUser...' + userId);
-
-
-
     var restcall = $resource('/api/profile/:id',{id: userId} );
-    return restcall.query();
-
-    //var user = User.get({userId:123}, function() {
-    //  user.abc = true;
-    //  user.$save();
-    //});
-
-
-
+    restcall.get( function(data){
+      console.log(data);
+      return data;
+    });
   };
 
+  /**
+   * POST
+   * @param user
+   */
   var saveUser = function( user){
-    console.log('Service->Saving User...' +JSON.stringify(user));
+
     var restcall = $resource('/api/profile/'  );
     restcall.save({user:user}, function(data) {
-      console.log("SAVED");
+      console.log('Service->Saving User...' +JSON.stringify(data));
+      return data;
     });
   };
 

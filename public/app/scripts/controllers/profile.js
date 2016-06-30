@@ -7,15 +7,13 @@ angular.module('secureApp').controller('ProfileCtrl',   function ($rootScope, $s
   $scope.user={};
 
   $scope.getUser=function(){
-
     console.log('User Id is: ' + $rootScope.userId);
     $scope.user.id=$rootScope.userId;
     profileService.getUser($rootScope.userId,function(data){
       console.log("Controller ->Get user");
+      $scope.user=data;
     });
-    //profileService.query( function(data){
-    //  console.log('Load User Data!');
-    //});
+
 
   };
 
@@ -23,12 +21,10 @@ angular.module('secureApp').controller('ProfileCtrl',   function ($rootScope, $s
     console.log("Controller ->Save user");
     $scope.user.id='test';
     profileService.saveUser( $scope.user, function(data){
-      console.log("Controller ->Get user");
+      //data isn't getting returned back to the controller...
+      console.log("Controller ->Save user" + JSON.string(data));
+      $scope.user=data;
     });
-    //profileService.post().then(function(data){
-    //  console.log('Save User - Profile');
-    //});
-
   };
 
 
