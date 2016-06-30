@@ -1,8 +1,8 @@
 {
-  "name": "secure",
+  "name": "project_mean",
   "version": "0.0.0",
   "dependencies": {
-    "angular": "^1.4.0",
+    "angular": "^1.5.0",
     "bootstrap": "^3.2.0",
     "angular-ui-router": "^0.2.18",
     "animate.css": "^3.5.1",
@@ -14,7 +14,8 @@
     "jquery.stellar": "stellar#^0.6.2",
     "bower": "*",
     "install": "^1.0.4",
-    "angular-bootstrap-show-errors": "^2.3.0"
+    "angular-bootstrap-show-errors": "^2.3.0",
+    "angular-resource": "^1.5.7"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"

@@ -1,8 +1,8 @@
-<div class="jumbotron">
+<div class="jumbotron" ng-controller="ProfileCtrl" ng-init="getUser()">
 
-  <p class="lead">Update Profile</p>
+  <p class="lead">Update User Profile</p>
 
-  <form name="register" class="form-signin" novalidate ng-controller="RegisterCtrl">
+  <form name="register" class="form-signin" novalidate >
     <div class="form-group" show-errors>
       <label class="control-label" for="email">Email </label>
       <input type="email" id="email" name="email" ng-model="user.email" class="form-control" placeholder="Email address" required autofocus="">
@@ -26,12 +26,12 @@
     <div class="form-group" show-errors>
       <label class="control-label" for="password">Password </label>
       <input type="password" id="password" name="password" ng-model="user.password" class="form-control" placeholder="Password" required >
-      <label class="control-label" for="confirm">Re type Password </label>
-      <input type="password" id="confirm"  name="confirm" ng-model="user.confirm" class="form-control" placeholder="Confirm" validate-equals="user.password">
+      <label class="control-label" for="confirm">Confirm Password </label>
+      <input type="password" id="confirm"  name="confirm" ng-model="user.confirm" class="form-control" placeholder="Confirm" validate-equals="user.password" required>
       <p class="has-error" ng-show="register.confirm.$dirty && register.confirm.$invalid">Passwords must match</p>
     </div>
-    <button ng-click="satellizer()" ng-disabled="register.$invalid" class="btn btn-lg btn-default btn-block" type="button" ng-click="submit()">
-      Add/Update Profile
+    <button type="button" ng-disabled="register.$invalid" class="btn btn-lg btn-default btn-block"  ng-click="saveProfile()">
+      Save User Profile
     </button>
   </form>
 </div>

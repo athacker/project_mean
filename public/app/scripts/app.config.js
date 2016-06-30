@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $httpProvider, $authProvider, $locationProvider,  API_URL){
+angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $httpProvider, $authProvider, $locationProvider,showErrorsConfigProvider,  API_URL){
   $urlRouterProvider.otherwise('/');
    $stateProvider.state('main',{
      url:'/',
@@ -13,15 +13,16 @@ angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $
      templateUrl:'views/register.html'
    }).state('profile',{
      url:'/profile',
+     controller:'ProfileCtrl',
      templateUrl:'views/profile.html'
    }).state('responsive',{
      url:'/responsive',
      templateUrl:'views/responsive/responsive.html',
-     controller:'JobsCtrl'
+     //controller:'JobsCtrl'
    }).state('images',{
      url:'/images',
      templateUrl:'views/responsive/images.html',
-     controller:'JobsCtrl'
+     //controller:'JobsCtrl'
    }).state('carousel',{
      url:'/carousel',
      templateUrl:'views/responsive/carousel.html'})
@@ -70,6 +71,7 @@ angular.module('secureApp').config(function($urlRouterProvider,$stateProvider, $
    $authProvider.loginUrl = '/auth/login';
    $authProvider.signupUrl ='/auth/signup';
    $authProvider.loginRedirect = '/main';
+   showErrorsConfigProvider.showSuccess(true);
 
   //google authorized parameters MUST end with a dash /!! http://localhost:8080/
   $authProvider.google({

@@ -5,7 +5,9 @@ angular.module('secureApp').controller('LoginCtrl', function ($rootScope, $scope
   //implement this after we get email set up on a server and add in the email verification piece.
   $scope.manual=function(){
     auth.login( $scope.user).success(function(res){
-      $rootScope.userId = res.user.id;
+      $rootScope.userId = res.user._id;
+      console.log("Login.manula user id: " + $rootScope.userId);
+
       if(res.user.displayName){
         $rootScope.displayName = res.user.displayName;
       }else{
@@ -26,12 +28,13 @@ angular.module('secureApp').controller('LoginCtrl', function ($rootScope, $scope
   $scope.satellite=function(){
     $auth.login($scope.user)
       .then(function(res){
-        $rootScope.userId = res.data.user.id;
+        $rootScope.userId = res.data.user._id;
         if(res.data.user.displayName){
           $rootScope.displayName = res.data.user.displayName;
         }else{
           $rootScope.displayName = res.data.user.email;
         }
+        console.log("Login.satellite user id: " + $rootScope.userId);
 
         alert('success', 'Login Success', 'Welcome back, ' + res.data.user.email + '!');
         $state.go('main');
@@ -47,8 +50,9 @@ angular.module('secureApp').controller('LoginCtrl', function ($rootScope, $scope
   $scope.authenticate=function(provider){
     console.log('Send OAUTH authentication to provider: ' + provider);
     $auth.authenticate(provider).then(function(res){
-      $rootScope.userId = res.data.user.id;
+      $rootScope.userId = res.data.user._id;
       $rootScope.displayName =res.data.user.displayName;
+      console.log("Login social user id: " + $rootScope.userId);
       alert('success', 'Success Handler', 'Welcome back, ' + res.data.user.displayName + '!');
       $state.go('main');
     }, function(err){
@@ -58,7 +62,9 @@ angular.module('secureApp').controller('LoginCtrl', function ($rootScope, $scope
   }
 
 
-
+  $scope.test=function(){
+    alert();
+  }
 
 
   //manual set up
