@@ -10,7 +10,7 @@ var facebookAuth = require('./api/services/facebookAuth.js');
 var googleAuth = require('./api/services/googleAuth.js');
 var RegisterStrategy = require('./api/services/localStrategy.js');
 var createSendToken = require('./api/services/createSendToken.js');
-var jobs = require('./api/services/jobs.js');
+var profile = require('./api/services/profile.js');
 var emailVerification = require('./api/services/emailVerification.js');
 var app = express();
 var port  	 = process.env.PORT || 8080;
@@ -56,7 +56,9 @@ app.post('/auth/signup',passport.authenticate('local-register'), function(req,re
     createSendToken(req.user,res);
 });
 
-app.get('/jobs', jobs);
+app.get('/api/profile/:id', profile.get);
+app.post('/api/profile',profile.post);
+
 app.post('/auth/facebook',facebookAuth );
 app.post('/auth/google',googleAuth);
 

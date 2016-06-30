@@ -1,6 +1,12 @@
 var jwt = require('jwt-simple');
-module.exports=function(req, res){
-console.log(req.headers);
+
+
+
+
+module.exports.get = function(req, res){
+console.log('Get User: ' + req.params.id );
+
+
     if(!req.headers.authorization){
         console.log('No authorization in header...');
         res.status(401).send({message:'You are not authorized to view jobs.'});
@@ -13,7 +19,13 @@ console.log(req.headers);
     }
 
 
-    var jobs=[];
+    var profile=[];
 
-    res.json(jobs);
+    res.json(profile);
 };
+
+module.exports.post=function(req,res){
+    console.log('Post User: ' + req.body.user.id );
+
+    res.json({});
+}
