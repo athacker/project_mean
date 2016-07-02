@@ -9,7 +9,7 @@ angular.module('secureApp').service('localStorage', function ($rootScope, $windo
       user.displayName = user.email;
     }
     storage.setItem('displayName', user.displayName);
-    storage.setItem('userId', user.id);
+    storage.setItem('userId', user._id);
     $rootScope.$broadcast('user_logged_event');
  };
 

@@ -6,8 +6,13 @@
     <div class="form-group" show-errors>
       <label class="control-label" for="email">Email </label>
       <input type="email" id="email" name="email" ng-model="user.email" class="form-control" placeholder="Email address" required autofocus="">
-
       <p class="help-block" ng-show="register.email.$dirty && register.email.$invalid">Valid Email Please </p>
+    </div>
+
+    <div class="form-group" show-errors>
+      <label class="control-label" for="displayName">DisplayName</label>
+      <input  id="displayName" name="displayName" ng-model="user.displayName" class="form-control" placeholder="Display Name" required  >
+      <p class="help-block" ng-show="register.displayName.$dirty && register.displayName.$invalid">Display Name is required. </p>
     </div>
 
     <div class="form-group" show-errors>
@@ -23,8 +28,9 @@
     </div>
 
 
-    <div class="form-group" show-errors>
-      <label class="control-label" for="password">Password </label>
+
+    <div ng-show="register.$dirty" class="form-group" show-errors>
+      <label class="control-label" for="password">Password  {{register.$dirty}} </label>
       <input type="password" id="password" name="password" ng-model="user.password" class="form-control" placeholder="Password" required >
       <label class="control-label" for="confirm">Confirm Password </label>
       <input type="password" id="confirm"  name="confirm" ng-model="user.confirm" class="form-control" placeholder="Confirm" validate-equals="user.password" required>

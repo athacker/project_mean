@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('secureApp').factory('profileService',['$rootScope','$resource' , function ($rootScope, $resource) {
+angular.module('secureApp').factory('profileService',['$resource' , function ( $resource) {
   /**
    * GET
    * @param userId
