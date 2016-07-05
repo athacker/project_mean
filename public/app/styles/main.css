@@ -358,7 +358,7 @@ article p{
   .range-list img{
     width:33%;
     hight:33%
-  margin-right:10px;
+    margin-right:10px;
     margin-bottom:30px;
     margin-top: 20px;
   }
@@ -366,3 +366,38 @@ article p{
  .has-error {
   color:red;
 }
+
+.system header {
+  padding: 10px 0px 10px 0px;
+  margin: 0px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+
+ .child section header{
+
+   background-color: crimson;
+   color: white;
+   padding:10px 0px 10px 0px;
+   font-size: medium;
+   font-weight:  500;
+
+ }
+
+ .child article header{
+   border-radius: 5% ;
+   background-color: lightgrey;
+   color:black;
+   text-align: left;
+   padding:10px;
+   border: 10px;
+   margin:0px 0px 20px 0px;
+   font-weight: bold;
+ }
+
+ .child img{
+   width:11%;
+   hight:11%;
+   margin:0px;
+ }

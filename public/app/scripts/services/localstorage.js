@@ -12,7 +12,9 @@ angular.module('secureApp').service('localStorage', function ($rootScope, $windo
     storage.setItem('userId', user._id);
     $rootScope.$broadcast('user_logged_event');
  };
-
+  var reload=function(){
+    alert("loaded");
+  };
   var getDisplayName = function(){
       return storage.getItem('displayName');
   }
@@ -31,7 +33,8 @@ angular.module('secureApp').service('localStorage', function ($rootScope, $windo
     setUser:setUser,
     getDisplayName:getDisplayName,
     getUserId:getUserId,
-    clearStorage:clearStorage
+    clearStorage:clearStorage,
+    reload:reload
   }
 
 
